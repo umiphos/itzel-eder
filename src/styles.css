@@ -73,3 +73,16 @@ body {
     border-radius: 5px;
     margin: 10px 0;
   }
+
+  /* PhraseDateCountdown */
+  .phrase-date-countdown-section {
+    background: url('/public/photos/logo_boda_transparente.png') top/cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    background-size: contain;   /* Ajusta la imagen para que se vea completa */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center;
+  }
