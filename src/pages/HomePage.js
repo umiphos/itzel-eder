@@ -1,13 +1,15 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection';
-import ServicesPage from '../pages/ServicesPage';
-import Gallery from '../components/Gallery';
+import HeroSection from '../components/home/HeroSection';
+import PhraseDateCountdownPage from '../components/home/PhraseDateCountdown';
+import Gallery from '../components/home/Gallery';
+import VIPGuests from '../components/home/VIPGuests'
 
 function HomePage() {
   return (
     <div>
       <HeroSection />
-      <ServicesPage />
+      <PhraseDateCountdownPage />
+      <VIPGuests />
       <Gallery />
     </div>
   );
