@@ -3,7 +3,8 @@ import React from 'react';
 function HeroSection() {
   return (
     <section className="hero-section">
-      <h2>Itzel & Eder</h2>
+      <img src='/photos/logo_boda_transparente.png' className="absolute-top-left" ></img>
+
     </section>
   );
 }
