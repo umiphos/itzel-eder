@@ -3,8 +3,7 @@ import React from 'react';
 function HeroSection() {
   return (
     <section className="hero-section">
-      <h2>Capturing Moments</h2>
-      <p>Professional photography services for every occasion.</p>
+      <h2>Itzel & Eder</h2>
     </section>
   );
 }

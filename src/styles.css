@@ -44,12 +44,12 @@ body {
   }
 
   h2, h3 {
-    color: #444;
+    color: #929;
   }
 
   /* Hero Section */
   .hero-section {
-    background: url('/public/cow.jpg') center/cover;
+    background: url('/public/photos/Them2.jpeg') center/cover;
     height: 300px;
     display: flex;
     align-items: center;
