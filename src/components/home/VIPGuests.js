@@ -9,7 +9,7 @@ function VIPGuests() {
       <ul>
         <li>CARLOS AGUILAR VARGAS</li>
         <li>MA. LOURDES AIDA CERVANTES GARCIA</li>
-        <li>------------------------------------------------------------</li>
+        <li class="linea-divisoria"></li>
         <li>MA. MERICIA GALVEZ MONRROY</li>
         <li>JAVIER VICENTE FRUTO(+)</li>
       </ul>
@@ -20,14 +20,13 @@ function VIPGuests() {
       <ul>
         <li>JOSE LUIS CERVANTES GARCIA</li>
         <li>LETICIA AURORA CERVANTES GARCIA</li>
-        <li>------------------------------------------------------------</li>
+        <li class="linea-divisoria"></li>
         <li>LEONEL GALVEZ MONRROY</li>
         <li>MARIA FELIZ RIVERA JUAREZ</li>
       </ul>
     </div>
   </div>
 </section>
-
   );
 }
 
