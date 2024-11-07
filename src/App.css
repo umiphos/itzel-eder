@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'AlisabelaBrushley';
+  src: url('./fonts/AlisabelaBrushley.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AlisabelaBrushley';
+  src: url('./fonts/AlisabelaBrushleyItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ADegaSerif';
+  src: url('./fonts/ADegaSerifRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ADegaSerif';
+  src: url('./fonts/ADegaSerifItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ADegaSerif';
+  src: url('./fonts/ADegaSerifBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ADegaSerif';
+  src: url('./fonts/ADegaSerifBoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}

@@ -6,13 +6,16 @@ import VIPGuests from '../components/home/VIPGuests'
 import Information from '../components/home/Information'
 import Guidelines from '../components/home/Guidelines'
 import Gift from '../components/home/Gift'
+import Logo from '../components/home/Logo'
+
 
 
 function HomePage() {
   return (
     <div>
+      <Logo />
       <HeroSection />
-      <PhraseDateCountdownPage />
+      <PhraseDateCountdownPage targetDate="2024-11-23" />
       <VIPGuests />
       <Information />
       <Guidelines />
