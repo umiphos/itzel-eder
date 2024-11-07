@@ -32,7 +32,7 @@ const CountdownTimer = ({ targetDate }) => {
 
 
 
-function PhraseDateCountdownPage({ targetDate }) {
+function DateCountdownPage({ targetDate }) {
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
 
   function calculateTimeRemaining() {
@@ -61,22 +61,18 @@ function PhraseDateCountdownPage({ targetDate }) {
   }
 
   return (
-    <section className='phrase-date-countdown-section'>
-      <div data-bottom="opacity:0" data-center="opacity:1" className="div-container">
-        <h2>Estas invitado</h2>
-        <div>
+<section className="invite-section">
+  <div className="content-container">
+    <img src='/icons/flowers_division.png' alt="Icono de flores" className="icon-image"/>
+    <h2>Estas invitado</h2>
+    <b>El 23 de Noviembre, 2024</b>
+    <br />
+    <b>Itzel Aguilar &amp; Eder Gálvez</b>
+    <br />
+  </div>
+  <h2>Tiempo restante:</h2>
+  <p>{timeRemaining.days} días, {timeRemaining.hours} horas, {timeRemaining.minutes} minutos, {timeRemaining.seconds} segundos</p>
+</section>
+);}
 
-          <img src='/icons/bullet_blue.png' className="imagen-icon" />
-        </div>
-        El 23 de Noviembre, 2024
-        <br />
-        <b>Itzel Aguilar &amp; Eder Gálvez</b>
-        <br />
-        <div className="double_arrow"></div>
-      </div>
-      <h2>Tiempo restante:</h2>
-      <p>{timeRemaining.days} días, {timeRemaining.hours} horas, {timeRemaining.minutes} minutos, {timeRemaining.seconds} segundos</p>
-    </section>
-  );
-}
-export default PhraseDateCountdownPage;
+export default DateCountdownPage;

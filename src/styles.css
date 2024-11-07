@@ -14,11 +14,11 @@ body {
     align-items: center;
   }
 
-  /* Hero Section */
+/* Hero Section */
   .hero-section {
     position: relative;
     width: 100%;
-    height: 75vh; /* Ajusta la altura según tus necesidades */
+    height: 75vh;
   }
 
   .background-image {
@@ -31,28 +31,27 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centra la imagen */
-    width: 150px; /* Ajusta el tamaño según tus preferencias */
+    transform: translate(-50%, -50%);
+    width: 150px;
     height: auto;
-    z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
+    z-index: 1;
   }
 
-  /* Gallery */
+/* Gallery */
   .gallery img {
     height: auto;
     border-radius: 5px;
   }
 
-  /* PhraseDateCountdown */
+/* PhraseDateCountdown */
   .contenedor-columnas {
-    display: flex;  /* Organiza los elementos en columnas */
-    gap: 20px;      /* Espacio entre columnas */
+    display: flex;
+    gap: 20px;
   }
 
   .columna {
-    flex: 1;        /* Permite que las columnas tengan el mismo ancho */
+    flex: 1;
   }
-
 
   .seccion {
     display: flex;
@@ -62,7 +61,7 @@ body {
 
   .imagen-seccion {
     height: auto;
-    border-radius: 8px; /* Opcional: hace los bordes redondeados */
+    border-radius: 8px;
   }
 
   .absolute-top-left {
@@ -72,7 +71,7 @@ body {
     height: auto;
   }
 
-  /* Logo */
+/* Logo */
   .logo-section {
     display: flex;
     justify-content: center;
@@ -91,3 +90,31 @@ body {
     height: 75vh;
     object-fit: cover;
   }
+
+/* DateCountdown */
+.invite-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-image {
+  width: 150px; /* Tamaño del icono */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.invite-section h2,
+.invite-section b,
+.invite-section p {
+  margin: 5px 0;
+}

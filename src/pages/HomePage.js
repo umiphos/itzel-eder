@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/home/HeroSection';
-import PhraseDateCountdownPage from '../components/home/PhraseDateCountdown';
+import DateCountdownPage from '../components/home/DateCountdown';
 import Gallery from '../components/home/Gallery';
 import VIPGuests from '../components/home/VIPGuests'
 import Information from '../components/home/Information'
@@ -15,7 +15,7 @@ function HomePage() {
     <div>
       <Logo />
       <HeroSection />
-      <PhraseDateCountdownPage targetDate="2024-11-23" />
+      <DateCountdownPage targetDate="2024-11-23" />
       <VIPGuests />
       <Information />
       <Guidelines />
