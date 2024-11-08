@@ -2,15 +2,15 @@ import React from 'react';
 
 function Information() {
   return (
-<section class="information-section">
+<section className="information-section">
   <div className='information-container'>
     <img src='/icons/flowers_division.png' alt="Icono de flores" className="icon-image"/>
   </div>
 <h3>DÓNDE Y CUÁNDO</h3>
-<div class="information-columns-container">
-    <div class="information-column">
-      <div class="information-container">
-        <img src='/icons/icon_ceremony_green.png' alt="Ceremonia Icon" class="information-icon"/>
+<div className="information-columns-container">
+    <div className="information-column">
+      <div className="information-container">
+        <img src='/icons/icon_ceremony_green.png' alt="Ceremonia Icon" className="information-icon"/>
         <h3>Ceremonia</h3>
       </div>
       <ul>
@@ -31,9 +31,9 @@ function Information() {
       </ul>
     </div>
 
-    <div class="information-column">
-      <div class="information-container">
-        <img src='/icons/icon_reception_green.png' alt="Recepción Icon" class="information-icon"/>
+    <div className="information-column">
+      <div className="information-container">
+        <img src='/icons/icon_reception_green.png' alt="Recepción Icon" className="information-icon"/>
         <h3>Recepción</h3>
       </div>
       <ul>

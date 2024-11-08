@@ -1,7 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/home/HeroSection';
 import DateCountdownPage from '../components/home/DateCountdown';
-import Gallery from '../components/home/Gallery';
 import VIPGuests from '../components/home/VIPGuests'
 import Information from '../components/home/Information'
 import Guidelines from '../components/home/Guidelines'
