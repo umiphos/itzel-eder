@@ -5,7 +5,7 @@
 body {
   font-family: 'AlisabelaBrushley', sans-serif;
   font-style: italic;
-  color: #858282;
+  color: #000;
 }
 
 h3 {
@@ -30,7 +30,6 @@ ul li {
 }
 
 a {
-  color: #007bff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -45,8 +44,6 @@ a:hover {
 /* ============================= */
 
 header {
-  background-color: #333;
-  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,8 +90,20 @@ header {
 
 .countdown-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-container b {
+  font-size: 20px;
 }
 
 .image-section {
@@ -102,11 +111,10 @@ header {
   border-radius: 8px;
 }
 
-.absolute-center {
-  top: 50%;
-  left: 50%;
-  width: 200px;
+.countdown-icon-image {
+  width: 150px;
   height: auto;
+  margin-bottom: 10px;
 }
 
 /* ============================= */
@@ -167,45 +175,65 @@ header {
 /* ============================= */
 
 .vip-section {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding: 20px;
+  background-color: #f04f4f81;
+  color: #161412;
+  padding-top: 15px;
+  height: 600px;
+
 }
 
-.columns-container {
+.vip-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vip-columns-container {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
 }
 
-.column {
+
+.vip-column {
   flex: 1;
   width: 50%;
   text-align: center;
 }
 
-.column h3 {
+.vip-column h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  color: #161412;
 }
 
-.column ul {
+.vip-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.column li {
+.vip-column li {
   font-size: 1rem;
   padding: 5px 0;
   word-wrap: break-word;
 }
 
-.divider-line {
+.vip-divider-line {
   border-bottom: 1px dashed #000;
   margin: 10px 0;
+}
+
+.vip-icon-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 /* ============================= */
@@ -289,13 +317,11 @@ header {
 
 .columns-container-gift h2 {
   font-size: 2rem;
-  color: #333;
   margin-bottom: 20px;
 }
 
 .columns-container-gift h3 {
   font-size: 1.5rem;
-  color: #333;
   margin-bottom: 10px;
 }
 

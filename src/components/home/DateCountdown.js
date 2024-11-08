@@ -61,17 +61,18 @@ function DateCountdownPage({ targetDate }) {
   }
 
   return (
-<section className="invite-section">
-  <div className="content-container">
-    <img src='/icons/flowers_division.png' alt="Icono de flores" className="icon-image"/>
-    <h2>Estas invitado</h2>
-    <b>El 23 de Noviembre, 2024</b>
+<section className="countdown-section">
+  <div className="countdown-container">
+    <img src='/icons/flowers_division.png' alt="Icono de flores" className="countdown-icon-image"/>
+    <strong>
+      <p>{timeRemaining.days} días, {timeRemaining.hours} horas, {timeRemaining.minutes} minutos, {timeRemaining.seconds} segundos</p>
+    </strong>
+    <p>Nos emociona compartir este momento tan especial, por eso, queremos invitarte a ser parte de nuestra historia y celebrar juntos el amor y la alegría que nos une. Será un día lleno de magia y significado, y no sería lo mismo sin tu presencia. ¡Acompáñanos en este nuevo capítulo de nuestras vidas!</p>
+    <b>23 de Noviembre de 2024</b>
     <br />
-    <b>Itzel Aguilar &amp; Eder Gálvez</b>
+    <b>Itzel &amp; Eder</b>
     <br />
   </div>
-  <h2>Tiempo restante:</h2>
-  <p>{timeRemaining.days} días, {timeRemaining.hours} horas, {timeRemaining.minutes} minutos, {timeRemaining.seconds} segundos</p>
 </section>
 );}
 
