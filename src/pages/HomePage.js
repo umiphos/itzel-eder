@@ -6,6 +6,8 @@ import Information from '../components/home/Information'
 import Guidelines from '../components/home/Guidelines'
 import Gift from '../components/home/Gift'
 import Logo from '../components/home/Logo'
+import BannerA from '../components/home/BannerA'
+import BannerB from '../components/home/BannerB'
 
 
 
@@ -16,8 +18,10 @@ function HomePage() {
       <HeroSection />
       <DateCountdownPage targetDate="2024-11-23" />
       <VIPGuests />
+      <BannerA />
       <Information />
       <Gift />
+      <BannerB />
       <Guidelines />
 
     </div>
