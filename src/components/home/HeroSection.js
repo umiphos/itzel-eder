@@ -3,8 +3,7 @@ import React from 'react';
 function HeroSection() {
   return (
   <section className="hero-section">
-    <img src='/photos/logo_boda_transparente.png' className="overlay-image"/>
-    <img src='/photos/pareja_humo.jpg' className="background-image"/>
+    <img src='/photos/como_que_no_me_doy_cuenta.jpg' className="background-image"/>
   </section>
 );}
 
