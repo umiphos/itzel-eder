@@ -8,7 +8,7 @@ function Guidelines() {
     <h3>IMPORTANTE</h3>
     <p>Nuestra celebración sera un evento exclusivo para adultos, es decir que <strong>NO HABRÁ NIÑOS.</strong></p>
     <p>El código de vestimenta será <strong>FORMAL</strong>, ayúdanos a reflejar el estilo y la atmósfera que queremos crear.</p>
-      <img src='/icons/dress_code.jpg' alt="Código de vestimenta" className="guidelines-background-image" />
+      <img src='/icons/dress_code.jpg' alt="Código de vestimenta" className="guidelines-banner-image " />
   </div>
 </section>
 
