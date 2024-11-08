@@ -18,8 +18,9 @@ function HomePage() {
       <DateCountdownPage targetDate="2024-11-23" />
       <VIPGuests />
       <Information />
-      <Guidelines />
       <Gift />
+      <Guidelines />
+
     </div>
   );
 }

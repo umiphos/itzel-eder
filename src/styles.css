@@ -221,3 +221,67 @@ a:hover {
     width: 100%;
   }
 }
+
+.seccion-regalo {
+  width: 100%;
+  padding: 20px;
+
+}
+.seccion-regalo h2 {
+  width: 100%;
+  text-align: justify;
+  text-align-last: center; /* Centra la última línea en caso de que sea una sola línea */
+  margin-bottom: 20px;
+
+}
+.contenedor-columnas-regalo {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contenedor-columnas-regalo h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contenedor-columnas-regalo h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contenedor-columnas-regalo ul li {
+  font-size: 1rem;
+  padding: 10px 0;
+  display: inline-flex; /* Asegura que el ícono y texto estén en la misma línea */
+  align-items: center; /* Centra el ícono verticalmente con el texto */
+  justify-content: center;
+}
+
+.columna-regalo {
+  flex: 1;
+  text-align: center;
+}
+.icon-regalo {
+  width: 2em; /* Ajuste con `em` para que escale con el zoom */
+  height: auto;
+  margin-right: 0.5em; /* Ajuste de espacio entre ícono y texto */
+  width: 3em !important;
+  height: auto;
+  display: inline-block !important;
+}
+@media (max-width: 768px) {
+  .contenedor-columnas-regalo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .columna-regalo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
