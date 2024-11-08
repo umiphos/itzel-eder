@@ -8,6 +8,38 @@ body {
   color: #858282;
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 1rem;
+  padding: 5px 0;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
 /* ============================= */
 /* Header */
 /* ============================= */
@@ -181,76 +213,48 @@ header {
 /* ============================= */
 
 .information-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  text-align: center; /* Centra el texto dentro de la sección */
   padding: 20px;
 }
 
-.information-columns-container h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+.information-section ul li {
+  font-size: 1rem;
+  padding: 3px 0;
 }
 
 .information-columns-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centra las columnas en el contenedor */
   gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Permite que las columnas se apilen en pantallas pequeñas */
 }
 
 .information-columns-container h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.information-column {
+  flex: 1;
+  min-width: 250px; /* Asegura que cada columna tenga un ancho mínimo */
+  max-width: 300px; /* Ancho máximo para limitar el tamaño de las columnas */
+  text-align: center; /* Centra el contenido dentro de cada columna */
+  padding: 10px;
 }
 
 .information-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
 }
 
-.icon {
+.information-icon {
   width: 150px;
   height: auto;
   margin-bottom: 10px;
 }
 
-h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  margin: 0;
-  padding: 10px 0;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-ul li {
-  font-size: 1rem;
-  padding: 5px 0;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 
 /* ============================= */
 /* Gift Section */

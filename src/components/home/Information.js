@@ -3,16 +3,22 @@ import React from 'react';
 function Information() {
   return (
 <section class="information-section">
-  <div class="information-columns-container">
-    <h3>Dónde y cuándo</h3>
-    <div class="column">
+  <div className='information-container'>
+    <img src='/icons/flowers_division.png' alt="Icono de flores" className="icon-image"/>
+  </div>
+<h3>DÓNDE Y CUÁNDO</h3>
+<div class="information-columns-container">
+    <div class="information-column">
       <div class="information-container">
-        <img src='/icons/icon_ceremony_green.png' alt="Ceremonia Icon" class="icon"/>
-        <h3>Ceremonia 5:00 PM</h3>
+        <img src='/icons/icon_ceremony_green.png' alt="Ceremonia Icon" class="information-icon"/>
+        <h3>Ceremonia</h3>
       </div>
       <ul>
-        <li>Parroquia del espiritu santo</li>
-        <li>Avenida Felipe Sevilla del Rio S/N</li>
+        <li>5:00 PM</li>
+        <li>Parroquia del Espíritu Santo</li>
+        <li>Avenida Felipe Sevilla del Río S/N</li>
+        <li>esquina Primo de Verdad,</li>
+        <li>Colima, Col.</li>
         <li>
           <a href="https://maps.app.goo.gl/7ip3gCPDNtSdyUBP9" target="_blank" rel="noopener noreferrer">
             <img
@@ -25,14 +31,18 @@ function Information() {
       </ul>
     </div>
 
-    <div class="column">
+    <div class="information-column">
       <div class="information-container">
-        <img src='/icons/icon_reception_green.png' alt="Recepción Icon" class="icon"/>
-        <h3>Recepción 7:00 PM</h3>
+        <img src='/icons/icon_reception_green.png' alt="Recepción Icon" class="information-icon"/>
+        <h3>Recepción</h3>
       </div>
       <ul>
-        <li>Hacienda Pastores, 4.5KM</li>
-        <li>Hacia el norte de la Hacienda del Carmen, antes de llegar al Chivato, Villa de Alvarez Colima</li>
+        <li>7:00 PM</li>
+        <li>Hacienda Pastores</li>
+        <li>4.5KM hacia el norte de la </li>
+        <li>Ex-Hacienda del Carmen</li>
+        <li>antes de llegar al Chivato</li>
+        <li>Villa de Alvarez, Col.</li>
         <li>
           <a href="https://maps.app.goo.gl/7ip3gCPDNtSdyUBP9" target="_blank" rel="noopener noreferrer">
             <img
