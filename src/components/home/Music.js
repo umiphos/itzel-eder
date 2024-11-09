@@ -58,8 +58,8 @@ const MusicPlayer = () => {
         <div className="welcome-overlay">
           <div className="welcome-message">
             <h1>¡Bienvenido!</h1>
-            <p>Haz clic en el botón para empezar a escuchar música.</p>
-            <button onClick={handleApproval}>Reproducir Música</button>
+            <p>Haz clic en el botón para ver la invitación.</p>
+            <button onClick={handleApproval}>Entrar</button>
           </div>
         </div>
       )}
