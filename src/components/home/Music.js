@@ -3,7 +3,7 @@ import './MusicPlayer.css';
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasUserApproved, setHasUserApproved] = useState(false); // Estado para saber si el usuario ha aprobado
+  const [hasUserApproved, setHasUserApproved] = useState(false);
   const audioRef = useRef(null);
 
   const togglePlayPause = () => {
@@ -22,13 +22,17 @@ const MusicPlayer = () => {
   };
 
   useEffect(() => {
+    // Copia del valor de audioRef.current antes de la limpieza
+    const audioElement = audioRef.current;
     // No reproducir automáticamente hasta que el usuario haya aprobado
     if (hasUserApproved) {
-      audioRef.current.play();
+      audioElement.play();
     }
-
     return () => {
-      audioRef.current.pause();
+      // Usamos la copia de audioElement en la función de limpieza
+      if (audioElement) {
+        audioElement.pause();
+      }
     };
   }, [hasUserApproved]);
 
@@ -41,7 +45,7 @@ const MusicPlayer = () => {
           <div className="welcome-message">
             <h1>¡Bienvenido!</h1>
             <p>Haz clic en el botón para empezar a escuchar música.</p>
-            <button onClick={handleApproval}>Reproducir Música</button>
+            <button onClick={handleApproval}>Ingresar</button>
           </div>
         </div>
       )}
