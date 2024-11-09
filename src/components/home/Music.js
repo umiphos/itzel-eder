@@ -3,53 +3,68 @@ import './MusicPlayer.css';
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasUserApproved, setHasUserApproved] = useState(false);
+  const [hasUserApproved, setHasUserApproved] = useState(false); // Controla si el usuario ha aprobado
   const audioRef = useRef(null);
 
+  // Función para alternar play/pause
   const togglePlayPause = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
+    const audio = audioRef.current;
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play().catch(error => {
+          console.error("Error en la reproducción:", error);
+        });
+      }
+      setIsPlaying(!isPlaying);
     }
-    setIsPlaying(!isPlaying);
   };
 
+  // Función para manejar la aprobación del usuario
   const handleApproval = () => {
     setHasUserApproved(true);
-    audioRef.current.play(); // Empieza a reproducir la canción
+    const audio = audioRef.current;
+    if (audio) {
+      audio.play().catch(error => {
+        console.error("Error al intentar reproducir:", error);
+      });
+    }
     setIsPlaying(true);
   };
 
   useEffect(() => {
-    // Copia del valor de audioRef.current antes de la limpieza
-    const audioElement = audioRef.current;
-    // No reproducir automáticamente hasta que el usuario haya aprobado
-    if (hasUserApproved) {
-      audioElement.play();
+    // Evitar la reproducción automática hasta que el usuario haya dado su aprobación
+    if (hasUserApproved && audioRef.current) {
+      const audio = audioRef.current;
+      audio.play().catch(error => {
+        console.error("Error al intentar reproducir:", error);
+      });
     }
+
     return () => {
-      // Usamos la copia de audioElement en la función de limpieza
-      if (audioElement) {
-        audioElement.pause();
+      if (audioRef.current) {
+        audioRef.current.pause();
       }
     };
-  }, [hasUserApproved]);
+  }, [hasUserApproved]); // Solo reproducir después de la aprobación
 
   return (
     <div className="music-player-container">
       <audio ref={audioRef} src="/files/song.mp3" loop />
 
+      {/* Capa de bienvenida que bloquea la interacción */}
       {!hasUserApproved && (
         <div className="welcome-overlay">
           <div className="welcome-message">
             <h1>¡Bienvenido!</h1>
             <p>Haz clic en el botón para empezar a escuchar música.</p>
-            <button onClick={handleApproval}>Ingresar</button>
+            <button onClick={handleApproval}>Reproducir Música</button>
           </div>
         </div>
       )}
 
+      {/* Mostrar el botón de música solo si el usuario ha aprobado */}
       {hasUserApproved && (
         <div className="music-player">
           <button className="play-pause-button" onClick={togglePlayPause}>
