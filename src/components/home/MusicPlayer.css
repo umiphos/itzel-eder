@@ -1,41 +1,90 @@
+/* MusicPlayer.css */
+.music-player-container {
+  position: relative;
+}
+
+.welcome-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que cubra toda la página */
+}
+
+.welcome-message {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.welcome-message h1 {
+  margin-bottom: 20px;
+}
+
+.welcome-message p {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #1db954; /* Color verde típico de Spotify */
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #1ed760;
+}
+
+/* Estilo para el botón flotante de música */
 .music-player {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(51, 51, 51, 0.8);
-    border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(51, 51, 51, 0.8);
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
 
-  .music-player:hover {
-    background-color: rgba(51, 51, 51, 1);
-  }
+.music-player:hover {
+  background-color: rgba(51, 51, 51, 1);
+}
 
-  .play-pause-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-  }
+.play-pause-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
 
-  .music-icon {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-  }
+.music-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
 
-  .music-icon.playing {
-    animation: rotate 2s linear infinite;
-  }
+.music-icon.playing {
+  animation: rotate 2s linear infinite;
+}
 
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
