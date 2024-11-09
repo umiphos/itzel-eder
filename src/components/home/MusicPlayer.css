@@ -1,0 +1,41 @@
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+
+  .music-player:hover {
+    background-color: rgba(51, 51, 51, 1);
+  }
+
+  .play-pause-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .music-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+
+  .music-icon.playing {
+    animation: rotate 2s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
