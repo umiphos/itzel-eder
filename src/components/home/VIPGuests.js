@@ -21,11 +21,11 @@ function VIPGuests() {
     <div className="vip-column">
       <h3>Nuestros Padrinos</h3>
       <ul>
+        <li>JOSÉ LUIS CERVANTES GARCIA</li>
+        <li>LETICIA AURORA CERVANTES GARCIA</li>
+        <li className="vip-divider-line"></li>
         <li>ALEJANDRA FABIOLA GÁLVEZ MAGAÑA</li>
         <li>JOSÉ MANUEL OSEGUERA JIMÉNEZ</li>
-        <li className="vip-divider-line"></li>
-        <li>LEONEL GALVEZ MONRROY</li>
-        <li>MARIA FELIZ RIVERA JUAREZ</li>
       </ul>
     </div>
   </div>
