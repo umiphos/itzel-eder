@@ -17,7 +17,7 @@ function HomePage() {
       <Logo />
       <MusicPlayer />
       <HeroSection />
-      <DateCountdownPage targetDate="2024-11-23" />
+      <DateCountdownPage targetDate="2024-11-23T18:00:00-06:00" />
       <VIPGuests />
       <BannerA />
       <Information />

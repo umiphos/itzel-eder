@@ -25,17 +25,19 @@ function DateCountdownPage({ targetDate}) {
   // eslint-disable-next-line
   }, [targetDate]);
 
-  if (timeRemaining.days < 0) {
-    return <div>¡El evento ha comenzado!</div>;
-  }
-
   return (
 <section className="countdown-section">
   <div className="countdown-container">
     <img src='/icons/flowers_division.png' alt="Icono de flores" className="countdown-icon-image"/>
-    <strong>
-      <p>{timeRemaining.days} días, {timeRemaining.hours} horas, {timeRemaining.minutes} minutos, {timeRemaining.seconds} segundos</p>
-    </strong>
+    {timeRemaining.days < 0 ? (
+          <p><strong>¡El evento ha comenzado!</strong></p>
+        ) : (
+          <strong>
+            <p>
+              {timeRemaining.days} días, {timeRemaining.hours} horas, {timeRemaining.minutes} minutos, {timeRemaining.seconds} segundos
+            </p>
+          </strong>
+        )}
     <p>Nos emociona compartir este momento tan especial, por eso, queremos invitarte a ser parte de nuestra historia y celebrar juntos el amor y la alegría que nos une. Será un día lleno de magia y significado, y no sería lo mismo sin tu presencia. ¡Acompáñanos en este nuevo capítulo de nuestras vidas!</p>
     <b>23 de Noviembre de 2024</b>
     <br />
