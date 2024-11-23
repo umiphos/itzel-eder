@@ -1,7 +1,6 @@
 import React, { useState, useEffect, memo } from 'react';
 import Particles from "react-particles";
 import { loadFireworksPreset } from "tsparticles-preset-fireworks";
-import ParticleAnimation from "./ParticleAnimation"
 
 function DateCountdownPage({ targetDate }) {
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining());
@@ -23,10 +22,9 @@ function DateCountdownPage({ targetDate }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeRemaining(calculateTimeRemaining());
-    }, 1000);
+    }, 10000); // Actualiza cada 10 segundos en lugar de cada segundo
 
     return () => clearInterval(interval);
-    // eslint-disable-next-line
   }, [targetDate]);
 
   // Cargar la configuración de fuegos artificiales
@@ -37,11 +35,49 @@ function DateCountdownPage({ targetDate }) {
 
   const eventStarted = timeRemaining.days < 0;
 
+  // Memorizar el componente Particles para evitar re-renderizaciones innecesarias
+  const MemoizedParticles = memo(() => (
+    <Particles
+      init={initializeFireworks}
+      options={{
+        preset: "fireworks",
+        fullScreen: false,
+        style: { width: "100%", height: "100%" },
+        interactivity: {
+          detectsOn: "canvas",
+          events: {
+            onClick: { enable: false },
+            onHover: { enable: false },
+            resize: false,
+          },
+        },
+        particles: {
+          number: {
+            value: 1,
+          },
+          density: {
+            enable: true,
+            area: 600, // Aumenta el área de emisión si es necesario
+          },
+          life: {
+            duration: 5,
+            delay: 0,
+          },
+          move: {
+            speed: 15, // Mueve las partículas más lentamente
+            outModes: { default: "destroy" }, // Rebote en los bordes
+          },
+          opacity: { value: 0 }, // Asegura que las partículas sean totalmente visibles
+        },
+        fpsLimit: 120, // Limita los FPS para un mejor control
+      }}
+    />
+  ));
+
   return (
     <section className="countdown-section">
       <div className="countdown-container" style={{ position: "relative" }}>
         <img src="/icons/flowers_division.png" alt="Icono de flores" className="countdown-icon-image" />
-
         {eventStarted ? (
           <>
             <h1><strong>¡El evento ha comenzado!</strong></h1>
@@ -57,44 +93,7 @@ function DateCountdownPage({ targetDate }) {
                 zIndex: -1,
               }}
             >
-
-              <Particles
-                init={initializeFireworks}
-                options={{
-                  preset: "fireworks",
-                  fullScreen: false,
-                  style: { width: "100%", height: "100%" },
-                  interactivity: {
-                    detectsOn: "canvas",
-                    events: {
-                      onClick: { enable: false },
-                      onHover: { enable: false },
-                      resize: false,
-                    },
-                  },
-                  particles: {
-                    number: {
-                      value: 1,
-                    },
-                    density: {
-                      enable: true,
-                      area: 600, // Aumenta el área de emisión si es necesario
-                    },
-                    life: {
-                      duration: 5,
-                      delay: 0,
-                    },
-                    move: {
-                      speed: 15, // Mueve las partículas más lentamente
-                      outModes: { default: "destroy" }, // Rebote en los bordes
-                    },
-                    opacity: { value: 0 }, // Asegura que las partículas sean totalmente visibles
-                  },
-
-                  fpsLimit: 120, // Limita los FPS para un mejor control
-                }}
-              />
-
+              <MemoizedParticles />
             </div>
           </>
         ) : (
